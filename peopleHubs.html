@@ -1,0 +1,354 @@
+<!docType html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>人脉爆机</title>
+    <link href="css/public.css" rel="stylesheet" />
+    <link href="css/TouchSlideStyle.css" rel="stylesheet" />
+   <!-- <link rel="stylesheet" href="css/distribution/jquery.page.css?v=10" />-->
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/TouchSlide.1.1.js"></script>
+    <script src="js/jquery.page.js"></script>
+</head>
+<script>
+    $(function(){
+        /*微信类别选择*/
+        $('.typeList').find('li').click(function(){
+            $(this).addClass('active');
+            $(this).siblings().removeClass('active');
+        })
+
+        /*地区晒选*/
+        $('.area').find('dd').find('a').click(function(){
+            $(this).addClass('active');
+            $(this).siblings().removeClass('active');
+        })
+
+        /*类型筛选*/
+        $('.type').find('dd').find('a').click(function(){
+            $(this).addClass('active');
+            $(this).siblings().removeClass('active');
+        });
+
+        /*更多城市*/
+        $('.moreList').click(function(){
+            $(this).next().slideToggle();
+        });
+        $('.chooseCity').find('a').click(function(){
+            $(this).parents('.chooseCity').find('a').removeClass('active');
+            $(this).addClass('active');
+        })
+    })
+</script>
+<body>
+<div class="indexBox">
+    <!--导航-->
+    <div class="topBox">
+        <div class="top wrap">
+            <a href="javascript:void(0);" class="fl leftList"></a>
+            <ul class="fr rightList">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="market.html">云助商城</a></li>
+                <li><a href="enterStep.html">品牌入驻</a></li>
+                <li><a href="peopleHubs.html" class="active">人脉爆机</a></li>
+                <li><a href="beeClub.html">群峰会</a></li>
+                <li><a href="javascript:void(0);">帮助中心</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="peopleHubs">
+            <ol class="typeList wrap">
+                <li class="active">微信群</li>
+                <li>个人微信</li>
+                <li>微信公众号</li>
+                <li>认证微商</li>
+            </ol>
+            <div class="searchBox wrap">
+                <p class="search">
+                    <input type="text" placeholder="请输入微信群关键字、名称" class="searchTxt" />
+                    <input type="button" value="搜索" class="searchBtn" />
+                    <a href="issueQun.html">发布群</a>
+                </p>
+                <p class="hotSearch">热门搜索：<span>微信红包群</span><span>微信福利群</span></p>
+            </div>
+            <ul class="typeChoose wrap">
+                <li style="position: relative;">
+                    <dl class="area">
+                        <dt>地区：</dt>
+                        <dd>
+                            <a href="javascript:void(0);" class="active">全部</a>
+                            <a href="javascript:void(0);">北京市</a>
+                            <a href="javascript:void(0);">上海市</a>
+                            <a href="javascript:void(0);">天津市</a>
+                            <a href="javascript:void(0);">重庆市</a>
+                            <a href="javascript:void(0);">北京市</a>
+                            <a href="javascript:void(0);">上海市</a>
+                            <a href="javascript:void(0);">天津市</a>
+                            <a href="javascript:void(0);">重庆市</a>
+                            <a href="javascript:void(0);">北京市</a>
+                        </dd>
+                    </dl>
+                    <a href="javascript:void(0);" class="moreList">更多</a>
+                    <ul class="chooseCity">
+                        <li>
+                            <span>北京：</span>
+                            <a href="javascript:void(0);" class="active">朝阳区</a>
+                            <a href="javascript:void(0);">海淀区</a>
+                            <a href="javascript:void(0);">昌平区</a>
+                            <a href="javascript:void(0);">东城区</a>
+                            <a href="javascript:void(0);">西城区</a>
+                            <a href="javascript:void(0);">崇文区</a>
+                            <a href="javascript:void(0);">宣武区</a>
+                            <a href="javascript:void(0);">通州区</a>
+                            <a href="javascript:void(0);">房山区</a>
+                        </li>
+                        <li>
+                            <span>上海：</span>
+                            <a href="javascript:void(0);">徐汇区</a>
+                            <a href="javascript:void(0);">闵行区</a>
+                            <a href="javascript:void(0);">普陀区</a>
+                            <a href="javascript:void(0);">宝山区</a>
+                            <a href="javascript:void(0);">杨浦区</a>
+                            <a href="javascript:void(0);">松江区</a>
+                            <a href="javascript:void(0);">嘉定区</a>
+                            <a href="javascript:void(0);">浦东新区</a>
+                        </li>
+                        <li>
+                            <span>广东：</span>
+                            <a href="javascript:void(0);">广州</a>
+                            <a href="javascript:void(0);">深圳</a>
+                            <a href="javascript:void(0);">珠海</a>
+                            <a href="javascript:void(0);">佛山</a>
+                            <a href="javascript:void(0);">东莞</a>
+                            <a href="javascript:void(0);">中山</a>
+                            <a href="javascript:void(0);">惠州</a>
+                            <a href="javascript:void(0);">湛江</a>
+                            <a href="javascript:void(0);">梅州</a>
+                            <a href="javascript:void(0);">潮州</a>
+                        </li>
+                        <li>
+                            <span>辽宁：</span>
+                            <a href="javascript:void(0);">沈阳</a>
+                            <a href="javascript:void(0);">大连</a>
+                            <a href="javascript:void(0);">锦州</a>
+                            <a href="javascript:void(0);">丹东</a>
+                            <a href="javascript:void(0);">铁岭</a>
+                            <a href="javascript:void(0);">阜新</a>
+                        </li>
+                        <li>
+                            <span>江苏：</span>
+                            <a href="javascript:void(0);">南京</a>
+                            <a href="javascript:void(0);">镇江</a>
+                            <a href="javascript:void(0);">苏州</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <dl class="type">
+                        <dt>类型：</dt>
+                        <dd>
+                            <a href="javascript:void(0);" class="active">交友</a>
+                            <a href="javascript:void(0);">微商</a>
+                            <a href="javascript:void(0);">互粉</a>
+                            <a href="javascript:void(0);">交友</a>
+                            <a href="javascript:void(0);">摄影</a>
+                            <a href="javascript:void(0);">运动</a>
+                            <a href="javascript:void(0);">电影</a>
+                            <a href="javascript:void(0);">音乐</a>
+                            <a href="javascript:void(0);">微商</a>
+                            <a href="javascript:void(0);">微商</a>
+                            <a href="javascript:void(0);">互粉</a>
+                            <a href="javascript:void(0);">交友</a>
+                            <a href="javascript:void(0);">摄影</a>
+                            <a href="javascript:void(0);">运动</a>
+                            <a href="javascript:void(0);">电影</a>
+                            <a href="javascript:void(0);">音乐</a>
+                            <a href="javascript:void(0);">微商</a>
+                            <a href="javascript:void(0);">微商</a>
+                            <a href="javascript:void(0);">互粉</a>
+                            <a href="javascript:void(0);">交友</a>
+                            <a href="javascript:void(0);">摄影</a>
+                            <a href="javascript:void(0);">运动</a>
+                            <a href="javascript:void(0);">电影</a>
+                            <a href="javascript:void(0);">音乐</a>
+                            <a href="javascript:void(0);">微商</a>
+                            <a href="javascript:void(0);">微商</a>
+                            <a href="javascript:void(0);">互粉</a>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+            <div class="codeListBox">
+                <ul class="codeList wrap">
+                    <li>
+                        <a href="derivativeQun.html" class="liBox">
+                            <p class="imgBox"><img src="images/typeCode.png" /></p>
+                            <span class="typeName">微商交流经验</span>
+                            <p class="timeAndArea">
+                                <span class="fl">2015-9-1</span>
+                                <span class="fr">北京市</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="derivativeQun.html" class="liBox">
+                            <p class="imgBox"><img src="images/typeCode.png" /></p>
+                            <span class="typeName">微商交流经验</span>
+                            <p class="timeAndArea">
+                                <span class="fl">2015-9-1</span>
+                                <span class="fr">北京市</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="derivativeQun.html" class="liBox">
+                            <p class="imgBox"><img src="images/typeCode.png" /></p>
+                            <span class="typeName">微商交流经验</span>
+                            <p class="timeAndArea">
+                                <span class="fl">2015-9-1</span>
+                                <span class="fr">北京市</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="derivativeQun.html" class="liBox">
+                            <p class="imgBox"><img src="images/typeCode.png" /></p>
+                            <span class="typeName">微商交流经验</span>
+                            <p class="timeAndArea">
+                                <span class="fl">2015-9-1</span>
+                                <span class="fr">北京市</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="derivativeQun.html" class="liBox">
+                            <p class="imgBox"><img src="images/typeCode.png" /></p>
+                            <span class="typeName">微商交流经验</span>
+                            <p class="timeAndArea">
+                                <span class="fl">2015-9-1</span>
+                                <span class="fr">北京市</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="derivativeQun.html" class="liBox">
+                            <p class="imgBox"><img src="images/typeCode.png" /></p>
+                            <span class="typeName">微商交流经验</span>
+                            <p class="timeAndArea">
+                                <span class="fl">2015-9-1</span>
+                                <span class="fr">北京市</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="derivativeQun.html" class="liBox">
+                            <p class="imgBox"><img src="images/typeCode.png" /></p>
+                            <span class="typeName">微商交流经验</span>
+                            <p class="timeAndArea">
+                                <span class="fl">2015-9-1</span>
+                                <span class="fr">北京市</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="derivativeQun.html" class="liBox">
+                            <p class="imgBox"><img src="images/typeCode.png" /></p>
+                            <span class="typeName">微商交流经验</span>
+                            <p class="timeAndArea">
+                                <span class="fl">2015-9-1</span>
+                                <span class="fr">北京市</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="derivativeQun.html" class="liBox">
+                            <p class="imgBox"><img src="images/typeCode.png" /></p>
+                            <span class="typeName">微商交流经验</span>
+                            <p class="timeAndArea">
+                                <span class="fl">2015-9-1</span>
+                                <span class="fr">北京市</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="derivativeQun.html" class="liBox">
+                            <p class="imgBox"><img src="images/typeCode.png" /></p>
+                            <span class="typeName">微商交流经验</span>
+                            <p class="timeAndArea">
+                                <span class="fl">2015-9-1</span>
+                                <span class="fr">北京市</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="derivativeQun.html" class="liBox">
+                            <p class="imgBox"><img src="images/typeCode.png" /></p>
+                            <span class="typeName">微商交流经验</span>
+                            <p class="timeAndArea">
+                                <span class="fl">2015-9-1</span>
+                                <span class="fr">北京市</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="derivativeQun.html" class="liBox">
+                            <p class="imgBox"><img src="images/typeCode.png" /></p>
+                            <span class="typeName">微商交流经验</span>
+                            <p class="timeAndArea">
+                                <span class="fl">2015-9-1</span>
+                                <span class="fr">北京市</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="derivativeQun.html" class="liBox">
+                            <p class="imgBox"><img src="images/typeCode.png" /></p>
+                            <span class="typeName">微商交流经验</span>
+                            <p class="timeAndArea">
+                                <span class="fl">2015-9-1</span>
+                                <span class="fr">北京市</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="derivativeQun.html" class="liBox">
+                            <p class="imgBox"><img src="images/typeCode.png" /></p>
+                            <span class="typeName">微商交流经验</span>
+                            <p class="timeAndArea">
+                                <span class="fl">2015-9-1</span>
+                                <span class="fr">北京市</span>
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="derivativeQun.html" class="liBox">
+                            <p class="imgBox"><img src="images/typeCode.png" /></p>
+                            <span class="typeName">微商交流经验</span>
+                            <p class="timeAndArea">
+                                <span class="fl">2015-9-1</span>
+                                <span class="fr">北京市</span>
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+    </div>
+
+    <!--底部-->
+    <div class="bottomBox">
+        <div class="bottomContent wrap" style="width: 685px;">
+            <p class="bottomImgBox"><img src="images/bottom_img.png" /></p>
+            <div class="textContent">
+                <p>联系我们：<span>021-62867687</span></p>
+                <p class="mail">邮箱：<span>XXX@yunzhu.me</span></p>
+                <p>地址：上海市普陀区谈家渡路28号8楼F室</p>
+            </div>
+        </div>
+        <p class="yunText">copyright 上海云助信息科技有限公司 沪ICP备 123343434343</p>
+    </div>
+</div>
+</body>
+</html>

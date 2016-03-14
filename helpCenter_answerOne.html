@@ -1,0 +1,301 @@
+<!docType html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>人脉爆机-微商群</title>
+    <link href="css/public.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/TouchSlideStyle.css" rel="stylesheet" />
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/index.js"></script>
+    <style>
+        .mainLeft{
+            position: relative;
+        }
+    </style>
+</head>
+<script>
+    $(function(){
+        $('.mainLeft').css('top','0');
+        $('.others ul').find('li').click(function(){
+            $(this).find('a').addClass('active');
+            $(this).siblings().find('a').removeClass('active');
+            $('.mainRight_title').find('a').eq(2).text($(this).text());
+            window.location.href = 'helpCenter_answerOne.html#Q' + ($(this).index() + 1);
+            $('.mainLeft').animate({
+                top: (parseFloat($(document).scrollTop()) - 193) + 'px'
+            },'slow');
+        });
+    })
+</script>
+<body>
+<div class="indexBox">
+    <!--导航-->
+    <div class="topBox">
+        <div class="top wrap">
+            <a href="javascript:void(0);" class="fl leftList"></a>
+            <ul class="fr rightList">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="market.html">云助商城</a></li>
+                <li><a href="enterStep.html">品牌入驻</a></li>
+                <li><a href="peopleHubs.html">人脉爆机</a></li>
+                <li><a href="beeClub.html" class="active">群峰会</a></li>
+                <li><a href="javascript:void(0);">帮助中心</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--帮助中心-->
+    <div class="helpCenter">
+        <div class="wrap">
+            <div class="search">
+                <p class="searchBox">
+                    <input type="text" class="textInp fl" />
+                    <input type="button" value="搜索" class="butInp fl" />
+                </p>
+                <dl>
+                    <dt>热门搜索：</dt>
+                    <dd>如何开店？</dd>
+                    <dd>邀请合伙人有什么好处？</dd>
+                    <dd>合伙人在哪里？</dd>
+                </dl>
+            </div>
+            <div class="mainContent">
+                <div class="mainLeft fl">
+                    <div class="new_guide">
+                       <!-- <h3 class="1"><a href="helpCenter_earnMoney.html"> <span class="triangle"></span>新手指南</a></h3>-->
+                        <h3 class="1"><span class="triangle"></span>新手指南</h3>
+                        <ul>
+                            <li><a href="javascript:void(0);">不花一分钱，如何开店？</a></li>
+                            <li><a href="helpCenter_highCommission.html" class="active">如何坐收高额佣金？</a></li>
+                            <li><a href="helpCenter_earnMoney.html">群金币大用处，如何快速赚金币？</a></li>
+                            <li><a href="helpCenter_newNone.html">我的店铺使用指南</a></li>
+                        </ul>
+                    </div>
+                    <div class="others">
+                        <h3 class="2"><span class="triangle right"></span>其他问题</h3>
+                        <ul style="display: block;">
+                            <li><a href="#Q1" class="active">什么是云助商城？</a></li>
+                            <li><a href="#Q2">合伙人在哪里？</a></li>
+                            <li><a href="#Q3">邀请合伙人有什么好处? </a></li>
+                            <li><a href="#Q4">如何上架商品？</a></li>
+                            <li><a href="#Q5">商品销量暴增的秘密？</a></li>
+                            <li><a href="#Q6">产品售出后多久返佣可以提现？</a></li>
+                            <li><a href="#Q7">佣金如何提现？</a></li>
+                            <li><a href="#Q8">提现中的金额在哪里查看？</a></li>
+                            <li><a href="#Q9">云助商城佣金提现有其他手续费吗？</a></li>
+                            <li><a href="#Q10">登录账号密码忘记怎么改？</a></li>
+                            <li><a href="#Q11">云助商城支持哪几种支付方式？</a></li>
+                            <li><a href="#Q12">遇到退换货问题和客诉问题怎么办？</a></li>
+                            <li><a href="#Q13">云助商城买家下单后，由谁发货？</a></li>
+                            <li><a href="#Q14">买家如何找到自己的订单，确认收货？</a></li>
+                            <li><a href="#Q15">如何查看物流情况？</a></li>
+                            <li><a href="#Q16">三级分佣比例是否可以自定义设置调整？</a></li>
+                            <li><a href="#Q17">三级分销中都存在哪些角色？</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fr mainRight">
+                    <p class="mainRight_title">
+                        <a href="javascript:void(0);">帮助中心</a> > <a href="javascript:void(0);">其他问题</a></a>
+                    </p>
+                    <div class="mainBox">
+                        <p class="mainBox_head"><a href="javascript:void(0);">其他问题</a></p>
+                        <ul class="answerOne">
+                            <li class="line"></li>
+                            <li id="Q1">
+                                <p>
+                                    <strong>Q1:</strong>
+                                    <span>什么是云助商城？</span>
+                                </p>
+                                <p>
+                                    <strong>A1:</strong>
+                                    <span>云助商城是群导航打造的一个更懂微商的交易平台。我们的目标是在云助商城，找群人，一起赚钱，一起飞！</span>
+                                </p>
+                            </li>
+                            <li id="Q2">
+                                <p>
+                                    <strong>Q2:</strong>
+                                    <span>合伙人在哪里？</span>
+                                </p>
+                                <p>
+                                    <strong>A2:</strong>
+                                    <span>直接邀请：分享商品到微信、qq等渠道，好友进入点击“我要代理”注册后即可成为合伙人;二维码邀请：开店后，点击“分享家”分享专属二维码，好友扫码识别后，注册后即可成为合伙人，帮你一起赚钱啦！</span>
+                                </p>
+                            </li>
+                            <li id="Q3">
+                                <p>
+                                    <strong>Q3:</strong>
+                                    <span>邀请合伙人有什么好处？</span>
+                                </p>
+                                <p>
+                                    <strong>A3:</strong>
+                                    <span>在三级分佣机制下，您可以享受“合伙人额外利益分成”：<br />A店主 分享给 B合伙人 分享给C小伙伴<br />1.我的店直接销售就有分佣;<br />2.合伙人的店合伙人成功销售商品，我也可以从中获得额外奖励佣金；<br />3.小伙伴的店小伙伴成功销售商品，我也可以从中获得额外奖励佣金；</span>
+                                </p>
+                            </li>
+                            <li id="Q4">
+                                <p>
+                                    <strong>Q4:</strong>
+                                    <span>如何上架商品？</span>
+                                </p>
+                                <p>
+                                    <strong>A4:</strong>
+                                    <span>开店后，在“市场”点击"+上架到我的店铺"，市场任意商品均可上架销售哦！</span>
+                                </p>
+                            </li>
+                            <li id="Q5">
+                                <p>
+                                    <strong>Q5:</strong>
+                                    <span>商品销量暴增的秘密？</span>
+                                </p>
+                                <p>
+                                    <strong>A5:</strong>
+                                    <span>分享你的店铺的商品至微信、朋友圈、新浪微博、QQ空间、QQ、腾讯微博、人人网等网络社区，还可以通过发短信、复制链接、保存二维码等方式进行线上线下推广。发展自己的合伙人，壮大自己的团队，还愁没销量，不赚钱？</span>
+                                </p>
+                            </li>
+
+                            <li id="Q6">
+                                <p>
+                                    <strong>Q6:</strong>
+                                    <span>什么是云助商城？</span>
+                                </p>
+                                <p>
+                                    <strong>A6:</strong>
+                                    <span>云助商城是群导航打造的一个更懂微商的交易平台。我们的目标是在云助商城，找群人，一起赚钱，一起飞！</span>
+                                </p>
+                            </li>
+                            <li id="Q7">
+                                <p>
+                                    <strong>Q7:</strong>
+                                    <span>合伙人在哪里？</span>
+                                </p>
+                                <p>
+                                    <strong>A7:</strong>
+                                    <span>直接邀请：分享商品到微信、qq等渠道，好友进入点击“我要代理”注册后即可成为合伙人;二维码邀请：开店后，点击“分享家”分享专属二维码，好友扫码识别后，注册后即可成为合伙人，帮你一起赚钱啦！</span>
+                                </p>
+                            </li>
+                            <li id="Q8">
+                                <p>
+                                    <strong>Q8:</strong>
+                                    <span>邀请合伙人有什么好处？</span>
+                                </p>
+                                <p>
+                                    <strong>A8:</strong>
+                                    <span>在三级分佣机制下，您可以享受“合伙人额外利益分成”：<br />A店主 分享给 B合伙人 分享给C小伙伴<br />1.我的店直接销售就有分佣;<br />2.合伙人的店合伙人成功销售商品，我也可以从中获得额外奖励佣金；<br />3.小伙伴的店小伙伴成功销售商品，我也可以从中获得额外奖励佣金；</span>
+                                </p>
+                            </li>
+                            <li id="Q9">
+                                <p>
+                                    <strong>Q9:</strong>
+                                    <span>如何上架商品？</span>
+                                </p>
+                                <p>
+                                    <strong>A9:</strong>
+                                    <span>开店后，在“市场”点击"+上架到我的店铺"，市场任意商品均可上架销售哦！</span>
+                                </p>
+                            </li>
+                            <li id="Q10">
+                                <p>
+                                    <strong>Q10:</strong>
+                                    <span>商品销量暴增的秘密？</span>
+                                </p>
+                                <p>
+                                    <strong>A10:</strong>
+                                    <span>分享你的店铺的商品至微信、朋友圈、新浪微博、QQ空间、QQ、腾讯微博、人人网等网络社区，还可以通过发短信、复制链接、保存二维码等方式进行线上线下推广。发展自己的合伙人，壮大自己的团队，还愁没销量，不赚钱？</span>
+                                </p>
+                            </li>
+
+                            <li id="Q11">
+                                <p>
+                                    <strong>Q11:</strong>
+                                    <span>什么是云助商城？</span>
+                                </p>
+                                <p>
+                                    <strong>A11:</strong>
+                                    <span>云助商城是群导航打造的一个更懂微商的交易平台。我们的目标是在云助商城，找群人，一起赚钱，一起飞！</span>
+                                </p>
+                            </li>
+                            <li id="Q12">
+                                <p>
+                                    <strong>Q12:</strong>
+                                    <span>合伙人在哪里？</span>
+                                </p>
+                                <p>
+                                    <strong>A12:</strong>
+                                    <span>直接邀请：分享商品到微信、qq等渠道，好友进入点击“我要代理”注册后即可成为合伙人;二维码邀请：开店后，点击“分享家”分享专属二维码，好友扫码识别后，注册后即可成为合伙人，帮你一起赚钱啦！</span>
+                                </p>
+                            </li>
+                            <li id="Q13">
+                                <p>
+                                    <strong>Q13:</strong>
+                                    <span>邀请合伙人有什么好处？</span>
+                                </p>
+                                <p>
+                                    <strong>A13:</strong>
+                                    <span>在三级分佣机制下，您可以享受“合伙人额外利益分成”：<br />A店主 分享给 B合伙人 分享给C小伙伴<br />1.我的店直接销售就有分佣;<br />2.合伙人的店合伙人成功销售商品，我也可以从中获得额外奖励佣金；<br />3.小伙伴的店小伙伴成功销售商品，我也可以从中获得额外奖励佣金；</span>
+                                </p>
+                            </li>
+                            <li id="Q14">
+                                <p>
+                                    <strong>Q14:</strong>
+                                    <span>如何上架商品？</span>
+                                </p>
+                                <p>
+                                    <strong>A14:</strong>
+                                    <span>开店后，在“市场”点击"+上架到我的店铺"，市场任意商品均可上架销售哦！</span>
+                                </p>
+                            </li>
+                            <li id="Q15">
+                                <p>
+                                    <strong>Q15:</strong>
+                                    <span>商品销量暴增的秘密？</span>
+                                </p>
+                                <p>
+                                    <strong>A15:</strong>
+                                    <span>分享你的店铺的商品至微信、朋友圈、新浪微博、QQ空间、QQ、腾讯微博、人人网等网络社区，还可以通过发短信、复制链接、保存二维码等方式进行线上线下推广。发展自己的合伙人，壮大自己的团队，还愁没销量，不赚钱？</span>
+                                </p>
+                            </li>
+                            <li id="Q16">
+                                <p>
+                                    <strong>Q16:</strong>
+                                    <span>邀请合伙人有什么好处？</span>
+                                </p>
+                                <p>
+                                    <strong>A16:</strong>
+                                    <span>在三级分佣机制下，您可以享受“合伙人额外利益分成”：<br />A店主 分享给 B合伙人 分享给C小伙伴<br />1.我的店直接销售就有分佣;<br />2.合伙人的店合伙人成功销售商品，我也可以从中获得额外奖励佣金；<br />3.小伙伴的店小伙伴成功销售商品，我也可以从中获得额外奖励佣金；</span>
+                                </p>
+                            </li>
+                            <li id="Q17">
+                                <p>
+                                    <strong>Q17:</strong>
+                                    <span>如何上架商品？</span>
+                                </p>
+                                <p>
+                                    <strong>A17:</strong>
+                                    <span>开店后，在“市场”点击"+上架到我的店铺"，市场任意商品均可上架销售哦！</span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--底部-->
+    <div class="bottomBox">
+        <div class="bottomContent wrap" style="width: 685px;">
+            <p class="bottomImgBox"><img src="images/bottom_img.png" /></p>
+            <div class="textContent">
+                <p>联系我们：<span>021-62867687</span></p>
+                <p class="mail">邮箱：<span>XXX@yunzhu.me</span></p>
+                <p>地址：上海市普陀区谈家渡路28号8楼F室</p>
+            </div>
+        </div>
+        <p class="yunText">copyright 上海云助信息科技有限公司 沪ICP备 123343434343</p>
+    </div>
+</div>
+</body>
+</html>
