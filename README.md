@@ -1,2 +1,0 @@
-# xuyongbao.github.com
-index
