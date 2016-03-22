@@ -1,239 +1,187 @@
-<!docType html>
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <title>云助商城</title>
-    <link href="css/public.css" rel="stylesheet" />
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640 , user-scalable=no"/>
+    <title>聚划算</title>
     <link href="css/style.css" rel="stylesheet" />
-    <link href="css/TouchSlideStyle.css" rel="stylesheet" />
-    <script src="js/jquery-1.11.1.js"></script>
-    <script src="js/TouchSlide.1.1.js"></script>
 </head>
-<script>
-    $(function(){
-        TouchSlide({
-            slideCell:"#slideBox",
-            titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-            mainCell:".bd ul",
-            effect:"leftLoop",
-            autoPage:true,//自动分页
-            autoPlay:true //自动播放
-        });
-    })
-</script>
 <body>
-<div class="indexBox">
-    <!--导航-->
-    <div class="topBox">
-        <div class="top wrap">
-            <a href="javascript:void(0);" class="fl leftList"></a>
-            <ul class="fr rightList">
-                <li><a href="index.html" class="active">首页</a></li>
-                <li><a href="market.html">云助商城</a></li>
-                <li><a href="enterStep.html">品牌入驻</a></li>
-                <li><a href="peopleHubs.html">人脉爆机</a></li>
-                <li><a href="beeClub.html">群峰会</a></li>
-                <li><a href="javascript:void(0);">帮助中心</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <!--焦点图 b-->
-    <div style="width: 100%;">
-        <div id="slideBox" class="slideBox">
-            <div class="bd">
-                <ul>
-                    <li>
-                        <a class="pic" href="#"><img src="images/bannerA.jpg" /></a>
-                    </li>
-                    <li>
-                        <a class="pic" href="#"><img src="images/bannerB.jpg" /></a>
-                    </li>
-                    <li>
-                        <a class="pic" href="#"><img src="images/bannerA.jpg" /></a>
-                    </li>
-                    <li>
-                        <a class="pic" href="#"><img src="images/bannerB.jpg" /></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="hd">
-                <ul></ul>
-            </div>
-        </div>
-    </div>
-    <!--焦点图 e-->
-
-    <div class="mainBox x_fff">
-        <div class="main_1 wrap">
-            <p class="main_title">
-                <span>更懂你的平台</span>
-                <em>BETTER UNDERSTAND YOUR PLATFORM</em>
-            </p>
-            <ul class="main_content list1">
-                <li>
-                    <img src="images/list1_img1.png" />
-                    <p>0成本</p>
-                    <span>组建实战销售团队</span>
+    <div class="page">
+        <header>
+            <img src="images/header.png"/>
+        </header>
+        <nav>
+            <a href="javascript:;">返回</a>
+            <h1>聚划算</h1>
+        </nav>
+        <section class="banner">
+            <ul class="ban_img clearFix">
+                <li class="fl">
+                    <img src="images/banner1.png" alt=""/>
                 </li>
-                <li>
-                    <img src="images/list1_img2.png" />
-                    <p>代理云集</p>
-                    <span>百万认证微商<br />十万社群领袖</span>
+                <li class="fl">
+                    <img src="images/banner2.png" alt=""/>
                 </li>
-                <li>
-                    <img src="images/list1_img3.png" />
-                    <p>销售引爆</p>
-                    <span>品牌专场活动</span>
+                <li class="fl">
+                    <img src="images/banner1.png" alt=""/>
+                </li>
+                <li class="fl">
+                    <img src="images/banner2.png" alt=""/>
+                </li>
+                <li class="fl">
+                    <img src="images/banner1.png" alt=""/>
                 </li>
             </ul>
-        </div>
-    </div>
-    <div class="mainBox x_f6">
-        <div class="main_2 wrap">
-            <p class="main_title">
-                <span>更懂你的伙伴</span>
-                <em>KNOW YOUR PARTNER BETTER</em>
-            </p>
-            <ul class="main_content list2">
-                <li>
-                    <img src="images/list2_img1.png" />
-                    <p>
-                        <span>货源不愁</span>
-                        <em>爆款货源,品牌保障</em>
-                    </p>
+            <ol class="ban_btn clearFix">
+                <li class="fl"></li>
+                <li class="fl"></li>
+                <li class="fl"></li>
+                <li class="fl"></li>
+                <li class="active fl"></li>
+            </ol>
+        </section>
+        <section class="shopping_list">
+            <ul class="clearFix">
+                <li class="fl">
+                    <img src="images/shopping.png" alt=""/>
+                    <span>商品</span>
                 </li>
-                <li>
-                    <img src="images/list2_img2.png" />
-                    <p>
-                        <span>开店不愁</span>
-                        <em>0元开店,一键代理</em>
-                    </p>
+                <li class="fl">
+                    <img src="images/shopping.png" alt=""/>
+                    <span>商品</span>
                 </li>
-                <li style="margin-right: 0;">
-                    <img src="images/list2_img3.png" />
-                    <p>
-                        <span>推广不愁</span>
-                        <em>产品包装,快速分享</em>
-                    </p>
+                <li class="fl">
+                    <img src="images/shopping.png" alt=""/>
+                    <span>商品</span>
                 </li>
-                <li>
-                    <img src="images/list2_img4.png" />
-                    <p>
-                        <span>激励不愁</span>
-                        <em>平台补贴,奖励丰厚</em>
-                    </p>
+                <li class="fl">
+                    <img src="images/shopping.png" alt=""/>
+                    <span>商品</span>
                 </li>
-                <li style="margin-right: 0;">
-                    <img src="images/list2_img5.png" />
-                    <p>
-                        <span>销售不愁</span>
-                        <em>0囤货,0压货,0风险</em>
-                    </p>
+                <li class="fl">
+                    <img src="images/shopping.png" alt=""/>
+                    <span>商品</span>
+                </li>
+                <li class="fl">
+                    <img src="images/shopping.png" alt=""/>
+                    <span>商品</span>
+                </li>
+                <li class="fl">
+                    <img src="images/shopping.png" alt=""/>
+                    <span>商品</span>
+                </li>
+                <li class="fl">
+                    <img src="images/shopping.png" alt=""/>
+                    <span>商品</span>
                 </li>
             </ul>
-        </div>
+        </section>
+        <section class="shopping">
+            <dl>
+                <dt class="clearFix">
+                    <span class="fl"></span>
+                    <span class="fl">聚划算热卖排行</span>
+                    <span class="fl">TOP10</span>
+                </dt>
+                <dd>
+                    <img src="images/shop.png" alt=""/>
+                </dd>
+                <dd>
+                    <img src="images/shop.png" alt=""/>
+                </dd>
+                <dd>
+                    <img src="images/shop.png" alt=""/>
+                </dd>
+                <dd>
+                    <img src="images/shop.png" alt=""/>
+                </dd>
+                <dd>
+                    <img src="images/shop.png" alt=""/>
+                </dd>
+                <dd>
+                    <img src="images/shop.png" alt=""/>
+                </dd>
+                <dd>
+                    <img src="images/shop.png" alt=""/>
+                </dd>
+                <dd>
+                    <img src="images/shop.png" alt=""/>
+                </dd>
+                <dd>
+                    <img src="images/shop.png" alt=""/>
+                </dd>
+                <dd>
+                    <img src="images/shop.png" alt=""/>
+                </dd>
+            </dl>
+        </section>
+        <section class="more">
+            <a href="javascript:;">更多商品敬请期待</a>
+        </section>
+        <section class="tuan">
+            <img src="images/tuan.png" alt=""/>
+        </section>
+        <section class="more">
+            <a href="javascript:;">更多商品敬请期待</a>
+        </section>
+        <section class="tuan">
+            <img src="images/tuan1.png" alt=""/>
+        </section>
+        <section class="more">
+            <a href="javascript:;">更多商品敬请期待</a>
+        </section>
+        <section class="tuan">
+            <img src="images/tuan2.png" alt=""/>
+        </section>
+        <section class="more">
+            <a href="javascript:;">更多商品敬请期待</a>
+        </section>
+        <section class="tip">
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <footer>
+            <div></div>
+        </footer>
     </div>
-    <div class="mainBox x_fff">
-        <div class="main_3 wrap">
-            <p class="main_title">
-                <span>更懂你的团队</span>
-                <em>KNOW BETTER FOR YOUR TEAM</em>
-            </p>
-            <p class="main_content"><img src="images/main_3Pic.png" /></p>
-        </div>
-    </div>
-    <div class="mainBox x_f6">
-        <div class="main_4 wrap">
-            <p class="main_title">
-                <span>更懂你的管家</span>
-                <em>BETTER UNDERSTAND YOUR HOUSEKEEPER</em>
-            </p>
-            <ul class="main_content list4">
-                <li>
-                    <img src="images/list4_img1.png" />
-                    <div>
-                        <p>更专业</p>
-                        <span>会员、数据、客服、销售平台对接反馈</span>
-                    </div>
-                </li>
-                <li>
-                    <img src="images/list4_img2.png" />
-                    <div>
-                        <p>更安心</p>
-                        <span>消费者、微商入口分离保障利益，维护隐私</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="mainBox x_fff">
-        <div class="main_5 wrap">
-            <p class="main_title">
-                <span>入驻品牌</span>
-                <em>SETTLED BRAND</em>
-            </p>
-            <ul class="main_content list5">
-                <li>
-                    <img src="images/main_5_img1.jpg" />
-                </li>
-                <li>
-                    <img src="images/main_5_img2.jpg" />
-                </li>
-                <li>
-                    <img src="images/main_5_img3.jpg" />
-                </li>
-                <li>
-                    <img src="images/main_5_img4.jpg" />
-                </li>
-                <li>
-                    <img src="images/main_5_img5.jpg" />
-                </li>
-                <li>
-                    <img src="images/main_5_img6.jpg" />
-                </li>
-                <li>
-                    <img src="images/main_5_img7.jpg" />
-                </li>
-                <li>
-                    <img src="images/main_5_img8.jpg" />
-                </li>
-                <li>
-                    <img src="images/main_5_img9.jpg" />
-                </li>
-                <li>
-                    <img src="images/main_5_img10.jpg" />
-                </li>
-                <li>
-                    <img src="images/main_5_img11.jpg" />
-                </li>
-                <li>
-                    <img src="images/main_5_img12.jpg" />
-                </li>
-                <li>
-                    <img src="images/main_5_img13.jpg" />
-                </li>
-                <li>
-                    <img src="images/main_5_img14.jpg" />
-                </li>
-                <li>
-                    <img src="images/main_5_img15.jpg" />
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!--底部-->
-    <div class="bottomBox">
-        <div class="bottomContent wrap" style="width: 685px;">
-            <p class="bottomImgBox"><img src="images/bottom_img.png" /></p>
-            <div class="textContent">
-                <p>联系我们：<span>021-62867687</span></p>
-                <p class="mail">邮箱：<span>XXX@yunzhu.me</span></p>
-                <p>地址：上海市普陀区谈家渡路28号8楼F室</p>
-            </div>
-        </div>
-        <p class="yunText">copyright 上海云助信息科技有限公司 沪ICP备 123343434343</p>
-    </div>
-</div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
