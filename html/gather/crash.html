@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>碰撞</title>
+    <style>
+        #div1{
+            height: 100px;
+            width:100px;
+            background: red;
+            border-radius:50% ;
+            position:absolute;
+            left:0;
+            top:0;
+        }
+        #div2{
+             height: 100px;
+             width:100px;
+             background: blue;
+             border-radius:50% ;
+             position:absolute;
+             left:0;
+             top:0;
+         }
+    </style>
+</head>
+<script>
+    function drag(obj){
+        var aDiv=obj.children;
+        for(var i=0; i<aDiv.length; i++){
+
+            (function(index){
+
+                var lastX=0;
+                var lastY=0;
+                var speedX=0;
+                var speedY=0;
+            aDiv[i].onmousedown=function(ev){
+                clearInterval(this.timer);
+                var oEvt=ev||event;
+                var disX=oEvt.clientX-this.offsetLeft;
+                var disY=oEvt.clientY-this.offsetTop;
+
+                var This=this;
+                document.onmousemove=function(ev){
+                    clearInterval(This.timer);
+                    var oEvt=ev||event;
+                    var l=oEvt.clientX-disX;
+                    var t=oEvt.clientY-disY;
+                    if(l<0){
+                        l=0;
+                    }
+                    if(t<0){
+                        t=0;
+                    }
+                    if(l>document.documentElement.clientWidth-This.offsetWidth){
+                        l=document.documentElement.clientWidth-This.offsetWidth;
+                    }
+                    if(t>document.documentElement.clientHeight-This.offsetHeight){
+                        t=document.documentElement.clientHeight-This.offsetHeight;
+                    }
+                    This.style.left=l+'px';
+                    This.style.top=t+'px';
+                    speedX=l-lastX;
+                    speedY=t-lastY;
+                    lastX=l;
+                    lastY=t;
+                };
+                document.onmouseup=function(){
+                    move(This,speedX,speedY);
+                    document.onmousemove=document.onmouseup=null;
+                    This.releaseCapture && This.releaseCapture();
+                };
+                This.setCapture && This.setCapture();
+                return false;
+            };
+            })(i)
+
+        }
+    };
+    function move(obj,x,y){
+        //console.log("aaaaa",x,y);
+        clearInterval(obj.timer);
+        var l=obj.offsetLeft;
+        var t=obj.offsetTop;
+        obj.timer=setInterval(function(){
+
+            y += 3;
+            //console.log(y*0.8);
+           // console.log(test(obj.parentNode.children[0],obj.parentNode.children[1]));
+            if(test(obj.parentNode.children[0],obj.parentNode.children[1])){
+
+                x *= -0.8;
+                y *= -0.8;
+                //console.log(x,y);
+                //x -= 2;
+                //y += 2;
+                l=obj.offsetLeft+obj.offsetWidth/4;
+                t=obj.offsetTop-obj.offsetWidth/4;
+                for(var i=0; i<2;i++){
+                    if(obj.parentNode.children[i]!=obj){
+                        //alert(1)
+                        clearInterval(obj.parentNode.children[i].timer);
+                       // console.log("bbbbbb",x,y);
+                        obj.parentNode.children[i].style.left=obj.parentNode.children[i].offsetLeft-obj.parentNode.children[i].offsetWidth/4;
+                        obj.parentNode.children[i].style.top=obj.parentNode.children[i].offsetTop+obj.parentNode.children[i].offsetWidth/4;
+                        move(obj.parentNode.children[i],-x,-y);
+                    }
+                }
+            }
+
+
+            l += x;
+            t += y;
+            //console.log(t,document.documentElement.clientHeight-obj.offsetHeight)
+            if(l<0){
+                l=0;
+                x *= -0.8;
+                y *= 0.8;
+                console.log(1);
+            }
+            if(t<0){
+                t=0;
+                x *= 0.8;
+                y *= -0.8;
+                console.log(2);
+            }
+            if(l>document.documentElement.clientWidth-obj.offsetWidth){
+                l=document.documentElement.clientWidth-obj.offsetWidth;
+                x *= -0.8;
+                y *= 0.8;
+                console.log(3);
+            }
+            if(t>document.documentElement.clientHeight-obj.offsetHeight){
+                t=document.documentElement.clientHeight-obj.offsetHeight;
+                x *= 0.8;
+                y *= -0.8;
+                console.log(4);
+            }
+
+            obj.style.left=Math.round(l)+'px';
+            obj.style.top=Math.round(t)+'px';
+            if(Math.abs(x)<1){
+                x=0;
+            }
+            if(Math.abs(y)<1){
+                y=0;
+            }
+            console.log(x,y);
+            if(x == 0 && y == 0 && Math.round(t) == document.documentElement.clientHeight-obj.offsetHeight){
+                clearTimeout(obj.timer);
+            }
+           // console.log(count++);
+        },20)
+    };
+    var count=1;
+    function test(obj1,obj2){
+        var x= obj1.offsetLeft - obj2.offsetLeft;
+        var y= obj1.offsetTop - obj2.offsetTop;
+
+        var dis = Math.sqrt(x*x + y*y);
+
+        if(dis < (obj1.offsetWidth + obj2.offsetWidth)/2){
+            return true;
+        }else{
+            return false;
+        }
+    };
+    function geDis(obj1,obj2){
+        var x= obj1.offsetLeft - obj2.offsetLeft;
+        var y= obj1.offsetTop - obj2.offsetTop;
+
+        var dis = Math.sqrt(x*x + y*y);
+
+        return dis;
+    };
+    window.onload=function(){
+        var oDiv= document.getElementById('div');
+        drag(oDiv);
+
+    };
+</script>
+<body>
+<div id="div">
+    <div id="div1">12</div>
+    <div id="div2">aaa</div>
+</div>
+</body>
+</html>
