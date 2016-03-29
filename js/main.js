@@ -38,9 +38,11 @@ $(function(){
 	for(var i=0;i<aSubnavLi.length;i++){
 		(function(index){
 			aHeaderOneLi[i].onclick = function(){
+                now=index;
 				screenTab(index);
 			}
 			aSubnavLi[i].onclick = function(){
+                now=index;
 				screenTab(index);
 			}
 		})(i);
@@ -55,6 +57,7 @@ $(function(){
 			now--;
 
 		}
+        if(now<0) now=0;
         now%=oScreen.length;
         screenTab(now);
         if(now==oScreen.length-1){
@@ -238,7 +241,6 @@ $(function(){
 			stepLi[i].style.position = 'absolute';
 			stepLi[i].style.margin = 0;
 			stepLi[i].innerHTML = '<img src="img/'+imgArr[i]+'.jpg" alt=""><a href="'+hrefArr[i]+'" target="_blank">'+textArr[i]+'</a>';
-			
 		}
 		// 翻页，位置随机todo
 		var pageA = pageStep.children[0];
@@ -377,7 +379,7 @@ $(function(){
 	//封装切屏函数
 	var oLogo = document.getElementById('sweet');
 	function screenTab(index){
-		if(!readyMove) return;
+		//if(!readyMove) return;
 		readyMove = false;
 		for(var i=0;i<aSubnavLi.length;i++){
 			aHeaderOneLi[i].className = 'fl';
