@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="move.js"></script>
+    <script>
+        function getStyle(obj,name){
+            return (obj.currentStyle || getComputedStyle(obj,false))[name];
+        }
+        function move(obj,json,options){
+            options=options || {};
+            options.duration=options.duration || 200;
+            options.easing=options.easing || 'linear';
+
+            var count=Math.round(options.duration/30);
+            var start={};
+            var dis={};
+
+            for(var name in json){
+                start[name]=parseFloat(getStyle(obj,name));
+                if(isNaN(start[name])){
+                    switch(name){
+                        case 'left':
+                            start[name]=obj.offsetLeft;
+                            break;
+                        case 'top':
+                            start[name]=obj.offsetTop;
+                            break;
+                        case 'width':
+                            start[name]=obj.offsetWidth;
+                            break;
+                        case 'height':
+                            start[name]=obj.offsetHeight;
+                            break;
+                        case 'opacity':
+                            start[name]=1;
+                            break;
+                        case 'marginLeft':
+                            start[name]=obj.offsetLeft;
+                            break;
+                        case 'fontSize':
+                            start[name]=12;
+                            break;
+                    }
+                }
+                dis[name]=json[name]-start[name];
+            }
+            var n=0;
+
+            clearInterval(obj.timer);
+            obj.timer=setInterval(function(){
+                n++;
+
+                for(var name in json){
+
+                    switch(options.easing){
+                        case 'linear':
+                            var a=n/count;
+                            var cur=start[name]+dis[name]*a;
+                            break;
+                        case 'ease-in':
+                            var a=n/count;
+                            var cur=start[name]+dis[name]*a*a*a;
+                            break;
+                        case 'ease-out':
+                            var a=1-n/count;
+                            var cur=start[name]+dis[name]*(1-Math.pow(a,3));
+                            break;
+                    }
+
+                    if(name=='opacity'){
+                        obj.style.opacity=cur;
+                        obj.style.filter='alpha(opacity:'+cur*100+')';
+                    }else{
+                        obj.style[name]=cur+'px';
+                    }
+                }
+                if(n==count){
+                    clearInterval(obj.timer);
+                    options.complete && options.complete();
+                }
+            },30);
+        }
+
+        window.onload=function(){
+            var oWrap=document.getElementById('wrap');
+            var oUl=oWrap.children[0];
+            var aLi=oUl.children;
+
+            var iNow=0;
+
+            oUl.onmousedown=function(ev){
+                var oEvent=ev || event;
+                var disX=oEvent.clientX-oUl.offsetLeft;
+
+                var downX=oEvent.clientX;
+
+                document.onmousemove=function(ev){
+                    var oEvent=ev || event;
+
+                    oUl.style.left=oEvent.clientX-disX+'px';
+                };
+
+                document.onmouseup=function(ev){
+                    var oEvent=ev || event;
+                    document.onmousemove=null;
+                    document.onmouseup=null;
+
+                    var upX=oEvent.clientX;
+
+                    if(Math.abs(downX-upX)<50){
+                        move(oUl,{left:-iNow*aLi[0].offsetWidth});
+                    }else{
+                        if(downX>upX){
+                            iNow++;
+                            if(iNow==aLi.length){
+                                iNow=aLi.length-1;
+                            }
+                            move(oUl,{left:-iNow*aLi[0].offsetWidth});
+                        }else{
+                            iNow--;
+                            if(iNow==-1){
+                                iNow=0;
+                            }
+                            move(oUl,{left:-iNow*aLi[0].offsetWidth});
+                        }
+                    }
+                };
+                return false;
+            };
+        };
+    </script>
+</head>
+
+<body>
+
+<div id="iphone">
+    <div id="wrap">
+        <ul>
+            <li style="background:url(images/pic1.png);"></li>
+            <li style="background:url(images/pic2.png);"></li>
+            <li style="background:url(images/pic3.png);"></li>
+            <li style="background:url(images/pic4.png);"></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
